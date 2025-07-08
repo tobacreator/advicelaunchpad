@@ -1,0 +1,25 @@
+ This file tells Cursor AI how to be an expert on the AdviceLaunchpad codebase.
+
+# Rule: Define our core technology stack.
+# Purpose: Ensures all generated code uses the correct libraries and syntax.
+The user is building an application with the following tech stack:
+- Next.js 14 (App Router)
+- React with TypeScript
+- Tailwind CSS for styling
+- Supabase for the database and authentication, using the `@supabase/supabase-js` client library.
+- Jest and React Testing Library for tests.
+
+# Rule: Point to key documentation.
+# Purpose: Allows Cursor to "read" and apply best practices from our chosen libraries.
+Use these documentation sources as the primary source of truth:
+- Next.js Docs: https://nextjs.org/docs
+- Supabase JS Client: https://supabase.com/docs/reference/javascript/
+- Tailwind CSS: https://tailwindcss.com/docs/
+- shadcn/ui: https://ui.shadcn.com/docs (We will use this for UI components)
+
+# Rule: Establish coding conventions.
+# Purpose: Maintains a clean and consistent codebase.
+- Components should be functional and use TypeScript for props.
+- Use server components (`"use server"`) by default where possible to improve performance.
+- All API routes created in `/app/api/` should be Next.js Route Handlers.
+- When generating a component, also generate a basic Jest test file for it.
